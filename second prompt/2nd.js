@@ -79,13 +79,13 @@ function keepInWindow(){
     nowDragging.style.top = '0px';
   }
   if (box.bottom > window.innerHeight){
-    nowDragging.style.top = window.innerHeight - box.height +'px';
+    nowDragging.style.top = window.innerHeight - 1 - box.height +'px';
   }
   if (box.left < 0){
     nowDragging.style.left = '0px';
   }
   if (box.right > window.innerWidth){
-    nowDragging.style.left =  window.innerWidth - box.width + 'px';
+    nowDragging.style.left =  window.innerWidth - 1 - box.width + 'px';
   }
 
 }
