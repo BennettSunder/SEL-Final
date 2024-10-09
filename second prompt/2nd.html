@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <link rel="stylesheet" href="2ndStyle.css">
+    <script src="2nd.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body onload="dragElement()">
+  <a href="../index.html">back</a>
+  <div class="container">
+      <div class="dialogue-button" onclick="openDialogue()">Open Dialog</div>
+      <div>Confirmation Counter: <span id="confirm-counter">0</span></div>
+  </div>
+  <div id="full-grey-out" onclick="cancelDialogue()"></div>
+  <div id="dialogue-container">
+    <button class="exit-button" onclick="cancelDialogue()">
+      <svg viewBox="0 0 24 24">
+        <path id="component-close" d="M12.84,12,18,17.16l-.84.84L12,12.84,6.84,18,6,17.16,11.16,12,6,6.84,6.84,6,12,11.16,17.16,6l.84.84Z"/>
+      </svg></button> 
+    <div id="dialogue-header">
+      <h3>Add to Confirmation Counter</h3>
+      <div class="line"></div>
+    </div>
+    <div class="dialogue-box">
+      <div id="dialog-message" data-old="false">You are about to increase the confirmation counter by 1.<br>Do you wish to continue?</div>
+    </div>
+    <div class="dialogue-footer">
+      <div class="button-holder">
+        <button class="dialogue-button" onclick="addCount()">Save</button>
+        <button class="cancel-button" onclick="cancelDialogue()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

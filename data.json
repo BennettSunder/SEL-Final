@@ -1,0 +1,123 @@
+{
+  "treeViewItems": [
+    {
+      "name": "Plants",
+      "children": [
+        {
+          "name": "Trees",
+          "children": [{ "name": "Oak" }, { "name": "Elm" }, { "name": "Ash" }]
+        },
+        {
+          "name": "Bushes",
+          "children": [
+            { "name": "Holley" },
+            { "name": "Hibiscus" },
+            { "name": "Jasmine" }
+          ]
+        },
+        { "name": "My Landscaper" }
+      ]
+    },
+    {
+      "name": "Animals",
+      "children": [
+        {
+          "name": "Mammals",
+          "children": [
+            { "name": "Human" },
+            { "name": "Lion" },
+            { "name": "Tiger" },
+            { "name": "Bear" }
+          ]
+        },
+        {
+          "name": "Reptiles",
+          "children": [{ "name": "Lizard" }, { "name": "Snake" }]
+        },
+        { "name": "Unicorn" },
+        { "name": "Omnicorn" },
+        { "name": "Dragon" }
+      ]
+    },
+    { "name": "Friends",
+      "children":[
+        { "name": "Air nation" },
+        {
+          "name": "Earth Kingdom",
+          "children":
+          [  
+            { 
+              "name": "Gaoling",
+              "children":
+                [
+                  { "name": "Toph" },
+                  { "name": "The Boulder" }
+                ]
+            },
+            {
+              "name": "Omashu",
+              "children":
+              [
+                { "name": "King Bumi" },
+                { "name": "Oma" },
+                { "name": "Shu" }
+              ]
+            },
+            { "name": "Haru" },
+            { "name": "Haru's Mom" }
+          ]
+        },
+        {
+          "name": "Fire Nation",
+          "children":
+          [
+            { 
+              "name": "Ember Island",
+              "children":
+              [
+                { "name": "Lo" },
+                { "name": "Li" },
+                { "name": "The Ember Island Players"}
+              ]
+            },
+            { 
+              "name": "Capital City",
+              "children":
+              [
+                { "name": "Zuko" },
+                { "name": "Azula" },
+                { "name": "Firelord Ozai" },
+                { "name": "Uncle Iroh" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Water Tribe",
+          "children":[
+            {
+              "name": "North Pole",
+              "children":[
+                { "name": "Master Paku" },
+                { "name": "The Water Tribe Leader" },
+                { "name": "The Water Tribe Leader's Wife" },
+                { "name": "Yue's Ex-Fiance" },
+                { "name": "Admiral Zhao's bloated, drowned corpse" }
+              ]
+            },
+            {
+              "name": "South Pole",
+              "children":
+              [
+                { "name": "Katara" },
+                { "name": "Sokka" },
+                { "name": "Gran-Gran" },
+                { "name": "Aang (he's an honorary member (se1-ep15))" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

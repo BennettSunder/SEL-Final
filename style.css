@@ -1,0 +1,392 @@
+/* mostly universal styling */
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #eee;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.container{
+  display: grid;
+  place-items: center;
+  padding: 5vw;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #3333;
+  max-height: 70vh;
+  min-width: 400px;
+  overflow: auto;
+}
+
+.header{
+  padding: 1vw;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px #3333;
+}
+
+h1{
+  font-size: 5vh;
+  text-align: center;
+  justify-content: center;
+}
+
+h2{
+  font-size: 3vh;
+  text-align: center;
+  justify-content: center;
+}
+
+.contents{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 1vw;
+  padding: 12px;
+  margin: 2vh 0px 5vh 0px;
+}
+
+a{
+  color:#333;
+  transition: 200ms;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+  font-size: 2vh;
+}
+a:hover{
+  scale: 1.1;
+  box-shadow: 5px 5px 12px #3333, -5px -5px 12px #fff;
+}
+
+.too-small{
+  font-size: 20vh;
+  display: none;
+}
+.nooo{
+  font-size: 40vh;
+  display: none;
+}
+
+/* media queries for main page */
+
+@media (max-height: 400px) {
+  .too-small{
+    display: block;
+  }
+  .header{
+    display: none;
+  }
+  .contents{
+    display: none;
+  }
+}
+
+@media (max-height: 100px){
+  .too-small{
+    display: none;
+  }
+  .header{
+    display: none;
+  }
+  .contents{
+    display: none;
+  }
+  .nooo{
+    display: block;
+  }
+}
+
+
+/* prompt 1 */
+
+.prompt-1 {
+  min-width: 300px;
+}
+
+.head-1-cont{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prompt-1 > .head-1-cont > input[type=text]{
+  display: flexbox;
+  flex-grow: 1;
+  border: solid 1px #90959a;
+  padding: 7px;
+  border-radius: 1px;
+  max-height: max-content;
+  width: auto;
+  margin-right: 7px;
+}
+
+#add-btn-1{
+  border: solid 1px #3984e8;
+  padding: 7px;
+  background-color: #0954b8;
+  color: white;
+  font-weight: bold;
+  /* font-size: 20px; */
+  border-radius: 2px;
+  max-width: auto;
+  right: 0px;
+}
+#add-btn:hover{
+  background-color: #3984e8;
+}
+
+.prompt-1 > #list{
+  width: auto;
+  min-width: 80px;
+  border: solid 1px #90959a;
+  min-height: 300px;
+  margin-top: 6px;
+}
+
+.prompt-1 > #list > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #90959a;
+  list-style-type: none;
+  padding: 8px;
+}
+
+.prompt-1 > #list > div > button {
+  border: none;
+}
+
+
+
+/* second prompt */
+
+
+#dialogue-container{
+  padding: 2px;
+  border-radius: 1px;
+  box-shadow: 3px 3px 10px #3333;
+  position: absolute;
+  display: none;
+}
+
+.dialogue-button{
+  border: solid 1px #3984e8;
+  padding: 7px;
+  background-color: #0954b8;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  transition: 150ms;
+  
+}
+.dialogue-button:hover{
+  scale: 1.1;
+  box-shadow: 2px 2px 5px #3333;
+  cursor: pointer;
+}
+
+.dialogue-box{
+  background-color: #eee;
+  padding: 20px;
+  width: 80vw;
+  max-width: 330px;
+}
+
+#dialogue-header{
+  background-color: white;
+  position: absolute;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  width: 80vw;
+  max-width: 370px;
+  justify-items: end;
+  margin: auto;
+  cursor: grab;
+}
+#dialogue-header:hover{
+  cursor: grab;
+}
+#dialogue-header:active{
+  cursor: grabbing;
+}
+
+#dialogue-header > h3 {
+  color: #0954b8;
+  padding-left: 20px;
+  background-color: inherit;
+}
+
+#old-version{
+  display: none;
+}
+
+.button-holder{
+  display: grid;
+  /* justify-content: space-between; */
+  grid-template-columns: auto auto auto auto;
+  column-gap: 12px;
+}
+
+.val-change-button{
+  border: solid 1px #90959a;
+  padding: 7px;
+  background-color: #eee;
+  color: #333;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  transition: 150ms;
+  min-width: 80px;
+  width: 4vw;
+  cursor: pointer;
+}
+
+.cancel-button{
+  border: solid 1px #90959a;
+  padding: 7px;
+  background-color: #eee;
+  color: #333;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  transition: 150ms;
+  cursor: pointer;
+}
+.cancel-button:hover{
+  scale: 1.05;
+  box-shadow: 2px 2px 5px #3333;
+  background-color: #333;
+  color: #eee;
+}
+
+#confirm-counter{
+  display: inline;
+}
+
+.exit-button{
+  border: none;
+  padding: 3px 6px;
+  background-color: #0000;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  transition: 50ms;
+  cursor: pointer;  
+}
+.exit-button:hover{
+  scale: 1.2;
+}
+
+#precounter{
+  height: 25vh;
+  width: 100%;
+  background-color: #3333;
+  display: grid;
+  place-items: center;
+  font-size: 10vh;
+  margin: 90px auto 24px auto;
+  border: none;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+#dialog-message{
+  font-weight: 600;
+  height: 25vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  margin: 30px auto 18px auto;
+  border: none;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+
+#full-grey-out{
+  width: 100vw;
+  height: 150vh;
+  background-color: #08101761;
+  /* display: grid; */
+  display: none;
+  place-items: center;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Third Prompt */
+
+#treeview{
+  background-color: #bbb;
+  border-radius: 20px;
+  min-height: 20px;
+  padding: 15px;
+  width: auto;
+  min-width: 200px;
+  max-width: 600px;
+}
+
+.branch {
+  display: flex;
+  color: #333;
+  padding: 7px;
+  border-radius: 2px;
+  background-color: #eee;
+  transition: 50ms;
+  display: block;
+  margin: 10px;
+  border-bottom: solid 1px #666;
+  align-content: center;
+}
+
+input + label {
+  padding: 4px;
+  margin: 0px 15px;
+  color: #333;
+  display: flex;
+  align-items: center;      
+  height: 100%;             
+  min-width: 200px;
+  width: 30vw;
+  max-width: 500px;
+}
+
+.tree-item:hover {
+  scale: 1.05;
+}
+
+
+
+.drp-dwn{
+  height: 0px;
+  width: 0px;
+  margin: 0px;
+  transition: 200ms;
+  font-size: 0px;
+  overflow: hidden;
+  background-color: #0000;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"]:checked + label + .drp-dwn{
+  display: block;
+  height: fit-content;
+  width: auto;
+  padding: 5px;
+  font-size: medium;
+  margin-left: 10px;
+  text-align: center;
+}

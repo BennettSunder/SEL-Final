@@ -1,0 +1,167 @@
+*{
+  font-family: "Noto Sans", sans-serif;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+.container{
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+  row-gap: 7px;
+}
+
+#full-grey-out{
+  width: 100vw;
+  height: 150vh;
+  background-color: #08101761;
+  /* display: grid; */
+  display: none;
+  place-items: center;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.dialogue-button{
+  border: solid 1px #3984e8;
+  padding: 7px 18px;
+  background-color: #0954b8;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  transition: 150ms;
+  width: fit-content;  
+}
+.dialogue-button:hover{
+  background-color: #094698;
+  cursor: pointer;
+}
+.dialogue-button:active{
+  background-color: #093978;
+}
+
+/* dialogue box styling */
+
+.exit-button{
+  background-color: #0000;
+  color: #444;
+  border: none;
+  position: relative;
+  float: right;
+  float: top;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: 10;
+  transition: 100ms;
+}
+.exit-button:hover{
+  scale: 1.2;
+  opacity: 90%;
+}
+
+#dialogue-header{
+  background-color: white ;
+  padding: 24px;
+  margin: 0px;
+  color: #0954b8;
+  user-select: none;
+  cursor: grab;
+}
+#dialogue-header:active{
+  cursor: grabbing;
+}
+#dialogue-header > h3{
+  margin: 0px;
+}
+
+.line{
+  height: 0.5px;
+  background-color: #0954b8;
+  width: auto;
+}
+
+.dialogue-box{
+  background-color: #fbe7f4;
+  color: #d61c9a;
+  height: 160px;
+  margin: 0px 24px;
+  padding: 24px 24px;
+  text-align: center;
+  align-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dialogue-footer{
+  display: flex;
+  width: 100%;
+  padding: 24px;
+  justify-content: end;
+}
+
+.button-holder{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 12px;
+  margin-right: 48px;
+}
+
+.cancel-button{
+  border: solid 1px #90959a  ;
+  padding: 7px;
+  background-color: white;
+  color: #081017e6;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  transition: 100ms;
+  width: fit-content;
+}
+.cancel-button:hover{
+  border-color: #8a8f94;
+  background-color: #0000420a;
+}
+.cancel-button:active{
+  border-color: #7b7f83;
+  background-color: #00004214;
+}
+
+#dialogue-container{
+  display: none;
+  background-color: white;
+  border-radius: 2px;
+  width: 80vw;
+  min-width: 200px;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow:0px 0px 10px #3333;
+}
+
+a{
+  color:white;
+  transition: 200ms;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+  font-size: 2vh;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+a:hover{
+  scale: 1.1;
+  box-shadow: 5px 5px 12px #3333, -5px -5px 12px #fff;
+  color: #aaa;
+}

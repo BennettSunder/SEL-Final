@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="second.js"></script>
+</head>
+<body onload="dragElement()">
+    <div class="container">
+        <div class="dialogue-button" onclick="openDialogue()">Open Dialogue</div>
+        <div>Confirmation Counter: <div id="confirm-counter">0</div></div>
+    </div>
+    <div id="full-grey-out" onclick="cancelDialogue()"></div>
+    <div id="dialogue-container">
+        <div id="dialogue-header">
+            <div></div>
+            <button class="exit-button" onclick="cancelDialogue()">&#10540;</button>
+            <h3 onclick="oldVersion()">Add to Confirmation Counter</h3>
+        </div>
+        <div class="line"></div>
+        <div class="dialogue-box">
+            
+            <input type="number" id="precounter" placeholder="0" style="display: none;" data-old="true">
+            <div id="dialog-message" data-old="false">You are about to increase the confirmation counter by 1. Do you wish to continue?</div>
+            <div class="button-holder">
+                
+                <button class="val-change-button" onclick="changeConf(-1)" style="display: none;" data-old="true">-</button>
+                <button class="val-change-button" onclick="changeConf(1)" style="display: none;" data-old="true">+</button>
+                <div class="placeholder" data-old="false"></div>
+                <div class="placeholder" data-old="false"></div>
+                <button class="dialogue-button" onclick="addCount()">Confirm</button>
+                <button class="cancel-button" onclick="cancelDialogue()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <a href="index.html">back</a>
+</body>
+</html>
