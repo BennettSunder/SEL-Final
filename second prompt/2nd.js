@@ -36,8 +36,7 @@ function dragElement(){
     // nowDragging is now not null, allowing the rest of the program to occur
     document.getElementById('dialogue-header').onmousedown = function(){
         nowDragging = element;
-        // alert(nowDragging)
-         
+        // alert(nowDragging)         
     }
     // when the user clicks anywhere on the webpage, the offset[]'s two items will be set to their respective values based on mouse movement
     this.addEventListener('mousedown', (event) =>{
@@ -72,16 +71,13 @@ window.addEventListener('resize', () =>{
   checkBoundsOnResize();
 });
 
-
 function checkBoundsOnResize() {
   // const box = document.getElementById('dialogue-container').getBoundingClientRect();
   keepInWindow();
 }
 
-
 function keepInWindow(){
   const box = document.getElementById('dialogue-container').getBoundingClientRect();
-
 
   // if the dialogue's transform dimensions exceed the bounds of the window, they will be set to the maximum value while staying in the window  
   if (box.top < 0){
@@ -96,5 +92,4 @@ function keepInWindow(){
   if (box.right > window.innerWidth){
     document.getElementById('dialogue-container').style.left =  window.innerWidth - box.width - 1 + 'px';
   }
-
 }
