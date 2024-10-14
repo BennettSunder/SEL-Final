@@ -5,7 +5,7 @@ function openDialogue(){
     document.getElementById('full-grey-out').style.display = 'grid';
     document.getElementById('dialogue-container').style.display = 'block';
     document.getElementById('precounter').value = 0;
-    
+
     document.getElementById('dialogue-container').style.top = window.innerHeight/2 - (document.getElementById('dialogue-container').offsetHeight/2)+'px';
     document.getElementById('dialogue-container').style.left = window.innerWidth/2 - (document.getElementById('dialogue-container').offsetWidth/2)+'px';
 }
@@ -39,7 +39,6 @@ function oldVersion(){
     old = !old;
 }
 
-//old version
 
 function changeConf(amount){
     let count = parseInt(document.getElementById('precounter').value);

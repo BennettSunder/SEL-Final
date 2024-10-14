@@ -73,7 +73,7 @@ fetch("data.json")
             <label for="item-${ID}">
               ${item.children ? folderIcon : ''}
               ${item.name}
-              ${item.children ? arrowIcon : ''}
+              ${item.children ? '<span class="arrow">' + arrowIcon + '</span>' : ''}
             </label>
             ${item.children ? `<div class="drp-dwn">${growTree(item.children)}</div>` : ''}
           </div>
@@ -89,92 +89,3 @@ fetch("data.json")
   {
     console.error('Fetch Error:', error);
   });
-
-      
-    //   let childrenEl = '';
-
-      
-
-    //   if (item.children){
-    //     for (let j = 0; j < item.children.length; j++){
-    //       let child = item.children[j];
-    //       let babies = '';
-    //       if (child.children)  {
-    //           for (let k = 0; k < child.children.length; k++){
-    //           babies += `<li>${child.children[k].name}</li>`;
-    //         }
-    //       }
-
-    //       childrenEl += `<div class="branch">
-    //       <input type="checkbox" id="item-${i}-${j}">
-    //         <label for="item-${i}-${j}">
-    //           ${child.children ? folderIcon : ' '}
-    //           ${child.name}
-    //           ${child.children ? arrowIcon : ' '}
-    //         </label>
-    //       ${child.children ? `<div class="drp-dwn" id="drop-down-${i}-${j}">${babies}</div>` : ''}
-    //     </div>
-    //     `;
-    //     }
-    //   }
-
-    //   output += `
-    //     <div class="branch">
-    //       <input type="checkbox" id="item-${i}">
-    //         <label for="item-${i}">
-    //           ${item.children ? folderIcon : ' '}
-    //           ${item.name}
-    //           ${item.children ? arrowIcon : ' '}
-    //         </label>
-    //       ${item.children ? `<div class="drp-dwn" id="drop-down-${i}">${childrenEl}</div>` : ''}
-    //     </div>
-    //     `;
-    // }
-    // return(output);
-
-//     }}}
-//     $('#treeview').html(addElement(treeViewItems));
-  
-  
-//   })
-//   .catch(function(error) {
-//     console.error('Fetch Error:', error);
-// });
-
-
-
-// function buildTreeview(containerDiv, items) {
-//   $.each(items, function (index, item) {
-//     const branch = $();
-//     containerDiv.append(branch);
-
-//     console.log('Building tree for:', item.name);
-
-//     if (item.children) {
-//       const leaf = $('<div></div>').addClass('tree-item');
-//       containerDiv.append(leaf);
-//       buildTreeview(leaf, item.children);
-//     }
-//   });
-// }
-
-$(document).ready(function(){
-  console.log("JS is here.");
-});
-
-/*
-
-  each.item( =>
-    makeDropdown(item);
-    if(has kids){
-      each(item.kids){
-        makeDrpDwn(item.kids);    
-      }
-    })
-
-  funky makeDrpDwn(where, what){
-    const theNewDropDown = $(<div></div>).addClass(makinItADropDown);
-    where.append(theNewDropDown);
-  }
-
-*/
