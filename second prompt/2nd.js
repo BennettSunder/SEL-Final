@@ -66,7 +66,7 @@ document.onmousemove = function(move){
 }
 
 window.addEventListener('resize', () =>{
-  document.getElementById('dialogue-container').style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+  // document.getElementById('dialogue-container').style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
 
   checkBoundsOnResize();
 });
