@@ -67,25 +67,34 @@ document.onmousemove = function(move){
 }
 
 window.addEventListener('resize', () =>{
-  keepInWindow();
+  document.getElementById('dialogue-container').style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+
+  checkBoundsOnResize();
 });
 
+
+function checkBoundsOnResize() {
+  // const box = document.getElementById('dialogue-container').getBoundingClientRect();
+  keepInWindow();
+}
+
+
 function keepInWindow(){
-  const box = nowDragging.getBoundingClientRect();
+  const box = document.getElementById('dialogue-container').getBoundingClientRect();
 
 
   // if the dialogue's transform dimensions exceed the bounds of the window, they will be set to the maximum value while staying in the window  
   if (box.top < 0){
-    nowDragging.style.top = '0px';
+    document.getElementById('dialogue-container').style.top = '0px';
   }
   if (box.bottom > window.innerHeight){
-    nowDragging.style.top = window.innerHeight - 1 - box.height +'px';
+    document.getElementById('dialogue-container').style.top = window.innerHeight - box.height - 1 + 'px';
   }
   if (box.left < 0){
-    nowDragging.style.left = '0px';
+    document.getElementById('dialogue-container').style.left = '0px';
   }
   if (box.right > window.innerWidth){
-    nowDragging.style.left =  window.innerWidth - 1 - box.width + 'px';
+    document.getElementById('dialogue-container').style.left =  window.innerWidth - box.width - 1 + 'px';
   }
 
 }
